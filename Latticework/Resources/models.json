@@ -1,0 +1,212 @@
+[
+  {
+    "id": "inversion",
+    "title": "Inversion",
+    "discipline": "Inversion",
+    "quote": "All I want to know is where I'm going to die, so I'll never go there.",
+    "definition": "Instead of asking how to achieve a goal, ask how you could guarantee failure — then avoid those things. Solving the inverse of a problem often reveals the answer the forward approach hides.",
+    "example": "To build a great career, list everything that reliably destroys careers — dishonesty, burning bridges, never updating skills — and systematically avoid each one.",
+    "whenToUse": "When a goal feels vague or overwhelming, flip it: what would guarantee the worst outcome?",
+    "trap": "Forward-only thinking that ignores obvious, avoidable failure modes.",
+    "drill": {
+      "scenario": "A founder wants their startup to succeed. Which is the most Munger-like first move?",
+      "options": [
+        "Write a vision statement about winning",
+        "List the top ways startups predictably die, and avoid them",
+        "Hire as fast as possible",
+        "Raise the largest round available"
+      ],
+      "correctIndex": 1,
+      "explanation": "Inversion: identify guaranteed failure modes (running out of cash, no product-market fit, co-founder conflict) and design to avoid them."
+    }
+  },
+  {
+    "id": "incentive-bias",
+    "title": "Incentive-Caused Bias",
+    "discipline": "Psychology",
+    "quote": "Show me the incentive and I will show you the outcome.",
+    "definition": "People (often unconsciously) rationalize behavior that serves their incentives. To predict behavior, study the incentives — not the stated intentions.",
+    "example": "A salesperson paid on commission will, on average, recommend the product that pays them most — usually while sincerely believing it's best for you.",
+    "whenToUse": "Any time you receive advice, evaluate a forecast, or design a system that rewards people.",
+    "trap": "Trusting stated motives while ignoring the financial or social rewards shaping them.",
+    "drill": {
+      "scenario": "A fund manager insists their high-fee product is best for you. What should you weigh most?",
+      "options": [
+        "Their confidence",
+        "Their credentials",
+        "How they are compensated",
+        "How long they've worked there"
+      ],
+      "correctIndex": 2,
+      "explanation": "Incentive-caused bias predicts that compensation structure shapes the recommendation more than sincerity does."
+    }
+  },
+  {
+    "id": "social-proof",
+    "title": "Social Proof",
+    "discipline": "Psychology",
+    "quote": "Big-shot businessmen get into these waves of social proof.",
+    "definition": "We copy the behavior of others, especially under uncertainty or stress. It's efficient in stable environments and disastrous in bubbles and panics.",
+    "example": "An investor buys a soaring stock simply because everyone else is — confusing the crowd's enthusiasm for analysis.",
+    "whenToUse": "When you notice you're doing something mainly because others are.",
+    "trap": "Outsourcing judgment to the crowd at exactly the moment the crowd is wrong.",
+    "drill": {
+      "scenario": "Everyone in your circle is buying one hot asset. The Munger move is to:",
+      "options": [
+        "Buy more than them to keep up",
+        "Pause and reason independently from fundamentals",
+        "Buy a little to fit in",
+        "Trust that so many people can't be wrong"
+      ],
+      "correctIndex": 1,
+      "explanation": "Social proof is strongest under uncertainty. Independent reasoning is the antidote."
+    }
+  },
+  {
+    "id": "confirmation-bias",
+    "title": "Confirmation Bias",
+    "discipline": "Psychology",
+    "quote": "The human mind is a lot like the human egg... it shuts out all other sperm.",
+    "definition": "Once we hold a conclusion, we seek confirming evidence and dismiss disconfirming evidence. Beliefs harden regardless of truth.",
+    "example": "After picking a stock, you read only bullish articles and explain away every warning sign.",
+    "whenToUse": "Whenever you feel certain — deliberately hunt for the strongest opposing case.",
+    "trap": "Mistaking a one-sided evidence pile for a balanced analysis.",
+    "drill": {
+      "scenario": "You're convinced a decision is right. The best disconfirming habit is to:",
+      "options": [
+        "Find more sources that agree",
+        "Articulate the strongest case against your own view",
+        "Move faster before doubt creeps in",
+        "Ask people who already agree with you"
+      ],
+      "correctIndex": 1,
+      "explanation": "Munger insisted you can't hold an opinion until you can argue the other side better than its proponents."
+    }
+  },
+  {
+    "id": "circle-of-competence",
+    "title": "Circle of Competence",
+    "discipline": "Economics",
+    "quote": "Knowing what you don't know is more useful than being brilliant.",
+    "definition": "Operate within the domains you genuinely understand. The boundary matters more than the size — knowing where your competence ends prevents costly errors.",
+    "example": "Buffett and Munger avoided tech for decades, not because it was bad, but because it sat outside their circle.",
+    "whenToUse": "Before any consequential decision: 'Do I actually understand this, or do I just feel like I do?'",
+    "trap": "Overconfidence that pushes you to act outside what you truly know.",
+    "drill": {
+      "scenario": "You're offered a deal in an industry you barely understand. The disciplined response is:",
+      "options": [
+        "Invest a little to learn",
+        "Decline or invest the time to genuinely understand it first",
+        "Trust the person offering it",
+        "Follow what experts on TV say"
+      ],
+      "correctIndex": 1,
+      "explanation": "Staying inside your circle of competence — or honestly expanding it before acting — beats faking understanding."
+    }
+  },
+  {
+    "id": "compound-interest",
+    "title": "Compounding",
+    "discipline": "Math & Probability",
+    "quote": "The first rule of compounding: never interrupt it unnecessarily.",
+    "definition": "Small advantages, repeated over long periods, produce nonlinear results. This applies to money, knowledge, and relationships alike.",
+    "example": "Reading 30 minutes a day seems trivial daily, but compounds into a vast knowledge advantage over decades.",
+    "whenToUse": "When evaluating anything long-term — savings, habits, skill-building.",
+    "trap": "Underestimating the long-run payoff of consistent small actions, and interrupting compounding for short-term gains.",
+    "drill": {
+      "scenario": "Which best reflects Munger's view of compounding?",
+      "options": [
+        "Chase big one-time wins",
+        "Protect consistent long-run growth and avoid interrupting it",
+        "Trade frequently to capture every move",
+        "Time the market precisely"
+      ],
+      "correctIndex": 1,
+      "explanation": "Compounding rewards patience and continuity; needless interruption (taxes, fees, churn) is its enemy."
+    }
+  },
+  {
+    "id": "margin-of-safety",
+    "title": "Margin of Safety",
+    "discipline": "Physics & Engineering",
+    "quote": "Engineering has a margin of safety. Life should too.",
+    "definition": "Build in a buffer against error, bad luck, and the limits of your own knowledge. Borrowed from engineering, where bridges are built to hold far more than expected load.",
+    "example": "Buying an asset worth $1 for $0.60 leaves room to be wrong about the valuation and still come out fine.",
+    "whenToUse": "Whenever outcomes are uncertain and downside is real — finance, planning, risk.",
+    "trap": "Operating with no buffer, so a single error or surprise is catastrophic.",
+    "drill": {
+      "scenario": "An investment looks great only if everything goes perfectly. Munger would say:",
+      "options": [
+        "Go all in, it's a sure thing",
+        "Demand a margin of safety so you survive being wrong",
+        "Borrow money to maximize gains",
+        "Ignore the downside"
+      ],
+      "correctIndex": 1,
+      "explanation": "A margin of safety protects you precisely because the future is uncertain and you will sometimes be wrong."
+    }
+  },
+  {
+    "id": "ecosystem-thinking",
+    "title": "Ecosystem & Competition",
+    "discipline": "Biology",
+    "quote": "You may see displacement... like ecosystems where a species fills a niche.",
+    "definition": "Businesses and ideas compete like organisms in an ecosystem — niches, specialization, and survival pressures. Borrowing from biology clarifies competitive dynamics.",
+    "example": "A specialist company dominating a narrow niche can out-survive a generalist, much like a specialized species in a stable habitat.",
+    "whenToUse": "When analyzing competition, market structure, or why some players persist.",
+    "trap": "Treating markets as static rather than as evolving, competitive ecosystems.",
+    "drill": {
+      "scenario": "Why might a small niche company beat a large generalist?",
+      "options": [
+        "It spends more on ads",
+        "It occupies a defensible niche with specialized advantages",
+        "It is simply luckier",
+        "Size never matters"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ecosystem thinking: specialization in a defensible niche can outcompete broad but shallow generalists."
+    }
+  },
+  {
+    "id": "lollapalooza",
+    "title": "Lollapalooza Effect",
+    "discipline": "Psychology",
+    "quote": "Really big effects... only happen when factors combine.",
+    "definition": "When several psychological tendencies or forces act in the same direction at once, they don't add — they multiply, producing extreme outcomes.",
+    "example": "An auction combines social proof, scarcity, commitment, and reciprocity — together driving people to wildly overpay.",
+    "whenToUse": "When an outcome seems extreme; look for multiple biases stacking together.",
+    "trap": "Analyzing one factor at a time and missing the compounding interaction of several.",
+    "drill": {
+      "scenario": "An outcome is far more extreme than any single cause explains. Munger suspects:",
+      "options": [
+        "Pure randomness",
+        "Several forces combining and multiplying — a Lollapalooza",
+        "One dominant cause",
+        "Bad data"
+      ],
+      "correctIndex": 1,
+      "explanation": "The Lollapalooza effect describes multiple tendencies converging to produce outsized results."
+    }
+  },
+  {
+    "id": "availability-bias",
+    "title": "Availability Misweighing",
+    "discipline": "Psychology",
+    "quote": "The mind overweighs what's easily available.",
+    "definition": "We judge likelihood and importance by what comes to mind easily — recent, vivid, or emotional events — rather than by actual frequency.",
+    "example": "After seeing news of a plane crash, people overestimate flying risk though driving is far more dangerous.",
+    "whenToUse": "When estimating risk or probability, ask whether vividness is distorting your sense of the odds.",
+    "trap": "Confusing how easily something is recalled with how likely or important it actually is.",
+    "drill": {
+      "scenario": "A dramatic recent event makes a rare risk feel huge. The corrective is to:",
+      "options": [
+        "Trust the gut feeling of danger",
+        "Check actual base rates and frequencies",
+        "Avoid the activity entirely",
+        "Ask what's in the news"
+      ],
+      "correctIndex": 1,
+      "explanation": "Availability bias is countered by consulting real base rates rather than vivid memories."
+    }
+  }
+]

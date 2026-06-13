@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+# Xcode / Swift
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+.swiftpm/
+# Local preview tooling
+.claude/
+__pycache__/
