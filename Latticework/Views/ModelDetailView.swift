@@ -1,63 +1,61 @@
 import SwiftUI
-import SwiftData
+import LatticeworkKit
 
 struct ModelDetailView: View {
-    let model: MentalModel
-    @Environment(\.modelContext) private var context
+    let modelID: String
+    @Environment(AppState.self) private var app
     @State private var showDrill = false
+
+    private var model: MentalModel? { app.content.model(id: modelID) }
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 22) {
-                Text("\u{201C}\(model.quote)\u{201D}")
-                    .font(Theme.serif(22))
-                    .italic()
-                Text("— Charlie Munger")
-                    .font(.caption).foregroundStyle(.secondary)
+            if let model {
+                VStack(alignment: .leading, spacing: 18) {
+                    Text(model.title).font(Theme.font(26, .light)).foregroundStyle(Theme.ink)
 
-                section("What it is", model.definition)
-                section("Example", model.example)
-                section("When to use it", model.whenToUse)
-                section("The trap it prevents", model.trap)
+                    HStack(spacing: 8) {
+                        Pill(icon: .discipline(model.discipline.rawValue), text: model.discipline.rawValue)
+                        Pill(icon: .drills, text: statusLabel)
+                    }
 
-                Button {
-                    showDrill = true
-                } label: {
-                    Label("Start drill", systemImage: "target")
-                        .frame(maxWidth: .infinity)
+                    QuoteText(quote: model.quote, size: 19)
+
+                    section("What it is", model.definition)
+                    section("Example", model.example)
+                    section("When to use it", model.whenToUse)
+                    section("The trap it prevents", model.trap)
+
+                    Button { showDrill = true } label: {
+                        PrimaryButtonLabel(title: "Start drill", icon: .drills)
+                    }
+                    .buttonStyle(.plain)
+                    .padding(.top, 4)
                 }
-                .buttonStyle(.borderedProminent)
-                .tint(Theme.accent)
-                .padding(.top, 4)
+                .padding(20)
+            } else {
+                Text("Model not found.").font(Theme.font(15)).foregroundStyle(Theme.ink2).padding(40)
             }
-            .padding()
         }
-        .background(Color.appBackground)
-        .navigationTitle(model.title)
+        .background(Theme.page)
+        .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
         .sheet(isPresented: $showDrill) {
-            DrillView(model: model) { markLearned() }
+            if let model { DrillView(model: model) { app.recordDrill(modelID: model.id) } }
         }
     }
 
-    private func section(_ title: String, _ body: String) -> some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Text(title).font(.headline).foregroundStyle(Theme.accent)
-            Text(body).font(.body)
+    private var statusLabel: String {
+        switch app.status(for: modelID) {
+        case .new: return "New"; case .learning: return "Learning"; case .mastered: return "Mastered"
+        }
+    }
+
+    private func section(_ title: String, _ text: String) -> some View {
+        VStack(alignment: .leading, spacing: 7) {
+            Text(title.uppercased()).font(Theme.font(11, .bold)).tracking(0.7).foregroundStyle(Theme.faint)
+            Text(text).font(Theme.font(13.5)).foregroundStyle(Theme.body).lineSpacing(4)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-    }
-
-    private func markLearned() {
-        let id = model.id
-        let descriptor = FetchDescriptor<ModelProgress>(predicate: #Predicate { $0.modelID == id })
-        let existing = (try? context.fetch(descriptor))?.first
-        if let p = existing {
-            p.status = "learning"
-            p.lastReviewed = .now
-            p.drillsCompleted += 1
-        } else {
-            context.insert(ModelProgress(modelID: id, status: "learning", lastReviewed: .now, drillsCompleted: 1))
-        }
     }
 }

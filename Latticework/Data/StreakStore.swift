@@ -1,35 +1,35 @@
 import Foundation
 import Observation
+import LatticeworkKit
 
-/// Tracks daily-engagement streaks. Lightweight; persisted in UserDefaults.
+/// App-level streak store. Delegates all date logic to the kit's pure
+/// `StreakEngine`; persists `StreakState` in UserDefaults.
 @Observable
 final class StreakStore {
-    private let defaults = UserDefaults.standard
-    private let lastKey = "streak.lastActiveDay"
+    private let engine = StreakEngine()
+    private let defaults: UserDefaults
     private let countKey = "streak.count"
+    private let lastKey = "streak.lastActiveDay"
 
-    var count: Int { defaults.integer(forKey: countKey) }
+    private(set) var state: StreakState
 
-    /// Call when the user completes today's model. Returns true if streak advanced.
-    @discardableResult
-    func markTodayComplete() -> Bool {
-        let cal = Calendar.current
-        let today = cal.startOfDay(for: .now)
-        if let last = defaults.object(forKey: lastKey) as? Date {
-            let lastDay = cal.startOfDay(for: last)
-            if cal.isDate(lastDay, inSameDayAs: today) { return false } // already counted
-            let yesterday = cal.date(byAdding: .day, value: -1, to: today)!
-            let newCount = cal.isDate(lastDay, inSameDayAs: yesterday) ? count + 1 : 1
-            defaults.set(newCount, forKey: countKey)
-        } else {
-            defaults.set(1, forKey: countKey)
-        }
-        defaults.set(today, forKey: lastKey)
-        return true
+    init(defaults: UserDefaults = .standard) {
+        self.defaults = defaults
+        let count = defaults.integer(forKey: countKey)
+        let last = defaults.object(forKey: lastKey) as? Date
+        self.state = StreakState(count: count, lastActiveDay: last)
     }
 
-    var completedToday: Bool {
-        guard let last = defaults.object(forKey: lastKey) as? Date else { return false }
-        return Calendar.current.isDateInToday(last)
+    var count: Int { state.count }
+    var completedToday: Bool { engine.isCompleted(state, on: .now) }
+
+    /// Mark today complete. Returns true if the streak advanced.
+    @discardableResult
+    func markTodayComplete(now: Date = .now) -> Bool {
+        let outcome = engine.markComplete(state, now: now)
+        state = outcome.state
+        defaults.set(state.count, forKey: countKey)
+        defaults.set(state.lastActiveDay, forKey: lastKey)
+        return outcome.advanced
     }
 }

@@ -1,97 +1,68 @@
 import SwiftUI
+import LatticeworkKit
 
 struct TodayView: View {
-    @Environment(ContentStore.self) private var content
-    @Environment(StreakStore.self) private var streaks
+    @Environment(AppState.self) private var app
 
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
-                    streakRow
+                VStack(alignment: .leading, spacing: 16) {
+                    TitleHeader(glyph: .today, title: "Today")
 
-                    if let model = content.modelOfTheDay {
-                        NavigationLink(value: model) {
-                            DailyCard(model: model)
+                    Block(tinted: true) {
+                        HStack(spacing: 16) {
+                            StreakRing(count: app.streaks.count)
+                            VStack(alignment: .leading, spacing: 3) {
+                                Text("\(app.streaks.count)-day streak").font(Theme.font(15, .semibold))
+                                Text("Keep the latticework growing")
+                                    .font(Theme.font(13)).foregroundStyle(Theme.ink2)
+                            }
+                        }
+                    }
+
+                    if let model = app.content.modelOfTheDay {
+                        NavigationLink(value: model.id) {
+                            Block {
+                                VStack(alignment: .leading, spacing: 14) {
+                                    HStack(spacing: 8) {
+                                        AppIcon(.discipline(model.discipline.rawValue), size: 14)
+                                            .foregroundStyle(Theme.ink2)
+                                        Text("\(model.title) · model of the day".uppercased())
+                                            .font(Theme.font(11, .semibold)).tracking(0.5)
+                                            .foregroundStyle(Theme.faint)
+                                    }
+                                    Text(model.title).font(Theme.font(30, .light)).foregroundStyle(Theme.ink)
+                                    QuoteText(quote: model.quote)
+                                }
+                            }
                         }
                         .buttonStyle(.plain)
 
-                        applyPrompt(for: model)
+                        Block {
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text("Apply it today").font(Theme.font(14.5, .semibold))
+                                Text(model.whenToUse).font(Theme.font(13)).foregroundStyle(Theme.ink2).lineSpacing(3)
+                                Button {
+                                    if app.streaks.markTodayComplete() {
+                                        UINotificationFeedbackGenerator().notificationOccurred(.success)
+                                    }
+                                } label: {
+                                    PrimaryButtonLabel(
+                                        title: app.streaks.completedToday ? "Completed" : "Mark complete",
+                                        icon: app.streaks.completedToday ? .seal : nil)
+                                }
+                                .buttonStyle(.plain)
+                                .disabled(app.streaks.completedToday)
+                                .opacity(app.streaks.completedToday ? 0.6 : 1)
+                            }
+                        }
                     }
                 }
-                .padding()
+                .padding(20)
             }
-            .background(Color.appBackground)
-            .navigationTitle("Today")
-            .navigationDestination(for: MentalModel.self) { ModelDetailView(model: $0) }
+            .background(Theme.page)
+            .navigationDestination(for: String.self) { id in ModelDetailView(modelID: id) }
         }
-    }
-
-    private var streakRow: some View {
-        HStack(spacing: 12) {
-            Image(systemName: "flame.fill")
-                .foregroundStyle(Theme.accent)
-                .font(.title2)
-            Text("\(streaks.count)-day streak")
-                .font(.headline)
-            Spacer()
-            if streaks.completedToday {
-                Label("Done", systemImage: "checkmark.circle.fill")
-                    .foregroundStyle(.green)
-                    .font(.subheadline)
-            }
-        }
-        .padding()
-        .background(Color.card, in: .rect(cornerRadius: 16))
-    }
-
-    private func applyPrompt(for model: MentalModel) -> some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text("Apply it today")
-                .font(.headline)
-            Text(model.whenToUse)
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
-            Button {
-                withAnimation(.snappy) { streaks.markTodayComplete() }
-                UINotificationFeedbackGenerator().notificationOccurred(.success)
-            } label: {
-                Label(streaks.completedToday ? "Completed" : "Mark complete",
-                      systemImage: streaks.completedToday ? "checkmark" : "circle")
-                    .frame(maxWidth: .infinity)
-            }
-            .buttonStyle(.borderedProminent)
-            .tint(Theme.accent)
-            .disabled(streaks.completedToday)
-        }
-        .padding()
-        .background(Color.card, in: .rect(cornerRadius: 16))
-    }
-}
-
-struct DailyCard: View {
-    let model: MentalModel
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            Label(model.discipline.rawValue, systemImage: model.discipline.symbol)
-                .font(.caption.weight(.semibold))
-                .foregroundStyle(Theme.accent)
-
-            Text(model.title)
-                .font(.system(.largeTitle, design: .serif, weight: .bold))
-
-            Text("\u{201C}\(model.quote)\u{201D}")
-                .font(Theme.serif(18))
-                .foregroundStyle(.secondary)
-                .italic()
-
-            Text("— Charlie Munger")
-                .font(.caption)
-                .foregroundStyle(.tertiary)
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(24)
-        .background(Color.card, in: .rect(cornerRadius: 20))
     }
 }

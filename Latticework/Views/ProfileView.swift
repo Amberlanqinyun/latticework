@@ -1,49 +1,57 @@
 import SwiftUI
-import SwiftData
+import LatticeworkKit
 
 struct ProfileView: View {
-    @Environment(StreakStore.self) private var streaks
-    @Environment(ContentStore.self) private var content
-    @Query private var progress: [ModelProgress]
-
-    private var mastered: Int { progress.filter { $0.status == "mastered" }.count }
-    private var learning: Int { progress.filter { $0.status == "learning" }.count }
+    @Environment(AppState.self) private var app
 
     var body: some View {
         NavigationStack {
-            List {
-                Section {
-                    stat("Current streak", "\(streaks.count) days", "flame.fill")
-                    stat("Models learning", "\(learning)", "book")
-                    stat("Models mastered", "\(mastered) / \(content.models.count)", "checkmark.seal.fill")
-                }
-                Section("Subscription") {
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("Latticework Premium").font(.headline)
-                            Text("Full library, advanced drills, iCloud sync")
-                                .font(.caption).foregroundStyle(.secondary)
+            ScrollView {
+                VStack(alignment: .leading, spacing: 4) {
+                    TitleHeader(glyph: .profile, title: "Profile")
+
+                    Block {
+                        VStack(spacing: 0) {
+                            statRow(.flame, "Current streak", "\(app.streaks.count) days")
+                            Divider().background(Theme.line)
+                            statRow(.journal, "Models learning", "\(app.learningCount())")
+                            Divider().background(Theme.line)
+                            statRow(.seal, "Models mastered", "\(app.masteredCount()) / \(app.content.all.count)")
                         }
-                        Spacer()
-                        Button("Upgrade") { }
-                            .buttonStyle(.borderedProminent)
-                            .tint(Theme.accent)
+                    }
+
+                    SectionLabel(text: "Subscription")
+                    Block(emphasized: true) {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Latticework Premium").font(Theme.font(19, .light)).foregroundStyle(Theme.ink)
+                            Text("Full library, advanced drills, and iCloud sync across your devices.")
+                                .font(Theme.font(13)).foregroundStyle(Theme.ink2).lineSpacing(3)
+                            Button { } label: { PrimaryButtonLabel(title: "Upgrade · $49.99/yr") }
+                                .buttonStyle(.plain)
+                            Button { } label: { PrimaryButtonLabel(title: "Restore purchase", ghost: true) }
+                                .buttonStyle(.plain)
+                        }
+                    }
+
+                    SectionLabel(text: "About")
+                    Block(tinted: true) {
+                        Text("Built on the worldly wisdom of Charlie Munger. Quotes are short, attributed excerpts used for educational commentary.")
+                            .font(Theme.font(11.5)).foregroundStyle(Theme.ink2).lineSpacing(4)
                     }
                 }
-                Section("About") {
-                    Text("Built on the worldly wisdom of Charlie Munger. Quotes are short, attributed excerpts used for educational commentary.")
-                        .font(.caption).foregroundStyle(.secondary)
-                }
+                .padding(20)
             }
-            .navigationTitle("Profile")
+            .background(Theme.page)
         }
     }
 
-    private func stat(_ title: String, _ value: String, _ symbol: String) -> some View {
-        HStack {
-            Label(title, systemImage: symbol).foregroundStyle(Theme.accent)
+    private func statRow(_ glyph: AppIcon.Glyph, _ label: String, _ value: String) -> some View {
+        HStack(spacing: 11) {
+            AppIcon(glyph, size: 18).foregroundStyle(Theme.ink)
+            Text(label).font(Theme.font(14)).foregroundStyle(Theme.ink)
             Spacer()
-            Text(value).font(.body.weight(.semibold))
+            Text(value).font(Theme.font(14, .semibold)).monospacedDigit().foregroundStyle(Theme.ink)
         }
+        .padding(.vertical, 13)
     }
 }
