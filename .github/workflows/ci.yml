@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  kit:
+    name: LatticeworkKit
+    runs-on: macos-14
+    defaults:
+      run:
+        working-directory: LatticeworkKit
+    steps:
+      - uses: actions/checkout@v4
+      - name: Swift version
+        run: swift --version
+      - name: Build
+        run: swift build
+      - name: Headless verify (no XCTest required)
+        run: swift run Verify
+      - name: XCTest suite
+        run: swift test

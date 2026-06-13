@@ -9,3 +9,7 @@ xcuserdata/
 # Local preview tooling
 .claude/
 __pycache__/
+
+# SwiftPM
+.build/
+LatticeworkKit/.build/
