@@ -208,5 +208,446 @@
       "correctIndex": 1,
       "explanation": "Availability bias is countered by consulting real base rates rather than vivid memories."
     }
+  },
+  {
+    "id": "opportunity-cost",
+    "title": "Opportunity Cost",
+    "discipline": "Economics",
+    "quote": "Opportunity cost is a huge filter in life.",
+    "definition": "Every choice is measured against the best alternative you give up to make it. The true cost of an option is not its price tag but the next-best thing you could have done instead.",
+    "example": "Holding a mediocre stock isn't free — its real cost is the great opportunity you can't fund because your capital is tied up.",
+    "whenToUse": "Whenever you commit time, money, or attention, ask what you're giving up to do it.",
+    "trap": "Judging a choice in isolation instead of against your best available alternative.",
+    "drill": {
+      "scenario": "You're about to fund a so-so project. The Munger filter asks you to compare it against:",
+      "options": [
+        "The project's downside only",
+        "Your single best alternative use of the same resources",
+        "What competitors are doing",
+        "Last year's results"
+      ],
+      "correctIndex": 1,
+      "explanation": "Opportunity cost means a decision is only as good as it is relative to the best thing you could do instead."
+    }
+  },
+  {
+    "id": "deprival-superreaction",
+    "title": "Deprival-Superreaction",
+    "discipline": "Psychology",
+    "quote": "People are really crazy about minor decrements down.",
+    "definition": "Losing something — or merely the threat of losing it — produces a reaction far stronger than the pleasure of an equivalent gain. It drives panic selling, sunk-cost stubbornness, and bidding wars.",
+    "example": "An investor refuses to sell a falling stock at a small loss, then rides it down to a catastrophic one — the small loss felt unbearable.",
+    "whenToUse": "When you feel an outsized urge to avoid a loss or 'get it back,' pause and weigh it rationally.",
+    "trap": "Letting the pain of a loss override the actual expected value of the decision.",
+    "drill": {
+      "scenario": "You resist selling a losing position mainly because booking the loss feels awful. That feeling is:",
+      "options": [
+        "A reliable signal to hold",
+        "Deprival-superreaction distorting your judgment",
+        "Proof the asset will recover",
+        "Irrelevant to the decision"
+      ],
+      "correctIndex": 1,
+      "explanation": "Deprival-superreaction makes a loss feel worse than a comparable gain feels good, biasing you toward holding losers."
+    }
+  },
+  {
+    "id": "overconfidence",
+    "title": "Excessive Self-Regard",
+    "discipline": "Psychology",
+    "quote": "It is remarkable how much long-term advantage people like us have gotten by trying to be consistently not stupid, instead of trying to be very intelligent.",
+    "definition": "We systematically overrate our own judgment, skill, and the quality of our conclusions. The cure is humility, checklists, and disconfirming evidence.",
+    "example": "A trader attributes a lucky winning streak to skill, sizes up, and gives it all back when variance turns.",
+    "whenToUse": "Before a high-conviction decision, ask what an honest outsider would estimate, and where you might be fooling yourself.",
+    "trap": "Mistaking confidence for competence.",
+    "drill": {
+      "scenario": "You feel certain about a call after a hot streak. The disciplined move is to:",
+      "options": [
+        "Increase your bet to match your confidence",
+        "Separate luck from skill and check the base rate",
+        "Trust the streak",
+        "Stop analyzing"
+      ],
+      "correctIndex": 1,
+      "explanation": "Excessive self-regard inflates confidence; the antidote is humility and disconfirmation, not bigger bets."
+    }
+  },
+  {
+    "id": "authority-bias",
+    "title": "Authority-Misinfluence",
+    "discipline": "Psychology",
+    "quote": "When the authority is wrong, the followers will be wrong too.",
+    "definition": "We're wired to defer to authority figures — titles, uniforms, experts — and will follow them even past the point of sense, as Milgram's experiments showed.",
+    "example": "A team ships an obviously flawed plan because a senior leader endorsed it and no one wanted to object.",
+    "whenToUse": "When deferring to an authority, separate their credentials from the actual evidence for the claim.",
+    "trap": "Substituting someone's status for a real evaluation of their argument.",
+    "drill": {
+      "scenario": "A senior figure backs a plan you find weak. The right check is to:",
+      "options": [
+        "Defer — they outrank you",
+        "Evaluate the argument on its evidence, regardless of who made it",
+        "Assume they know something you don't",
+        "Stay quiet"
+      ],
+      "correctIndex": 1,
+      "explanation": "Authority-misinfluence makes us follow status over substance; weigh the evidence, not the title."
+    }
+  },
+  {
+    "id": "commitment-consistency",
+    "title": "Commitment & Consistency",
+    "discipline": "Psychology",
+    "quote": "We're heavily pushed to keep our prior conclusions intact, whether they deserve it or not.",
+    "definition": "Once we commit — publicly, in writing, or just internally — we feel pressure to stay consistent, even as evidence mounts against us. Inertia masquerades as integrity.",
+    "example": "A manager pours more budget into a failing initiative because abandoning it would contradict last quarter's confident memo.",
+    "whenToUse": "When defending a past decision, ask whether you'd make the same choice fresh today, knowing what you now know.",
+    "trap": "Confusing loyalty to a past statement with sound current judgment.",
+    "drill": {
+      "scenario": "You keep funding a failing plan partly because you championed it publicly. That's:",
+      "options": [
+        "Commendable consistency",
+        "Commitment-and-consistency bias, not analysis",
+        "Good leadership",
+        "Required follow-through"
+      ],
+      "correctIndex": 1,
+      "explanation": "Consistency bias defends prior commitments regardless of new evidence; re-decide from today's facts."
+    }
+  },
+  {
+    "id": "reciprocation",
+    "title": "Reciprocation Tendency",
+    "discipline": "Psychology",
+    "quote": "The automatic tendency to reciprocate favors runs very deep.",
+    "definition": "A favor, gift, or concession creates a powerful unconscious urge to repay in kind — which skilled persuaders exploit to extract disproportionate returns.",
+    "example": "A 'free' lavish dinner from a vendor quietly tilts a purchasing manager toward an overpriced contract.",
+    "whenToUse": "When you feel obligated after receiving something, separate the gesture from the merits of what's being asked.",
+    "trap": "Letting a small gift buy a large, unrelated concession.",
+    "drill": {
+      "scenario": "After a vendor's generous gift you feel you 'owe' them the deal. That pull is:",
+      "options": [
+        "A fair sense of gratitude to act on",
+        "Reciprocation tendency being exploited",
+        "Good relationship-building",
+        "Irrelevant"
+      ],
+      "correctIndex": 1,
+      "explanation": "Reciprocation can be weaponized: a small favor manufactures a large obligation. Judge the deal on its merits."
+    }
+  },
+  {
+    "id": "liking-bias",
+    "title": "Liking & Loving Tendency",
+    "discipline": "Psychology",
+    "quote": "We distort other facts to facilitate the love.",
+    "definition": "We over-trust, over-favor, and ignore the faults of people, products, and ideas we like — and we like those who flatter us, resemble us, or cooperate with us.",
+    "example": "Investors handed money to a charming, likeable fraudster because he felt like 'one of us.'",
+    "whenToUse": "When you strongly like a person or option, deliberately stress-test it as if you disliked it.",
+    "trap": "Letting affection substitute for evidence.",
+    "drill": {
+      "scenario": "You favor a founder mostly because you find them charismatic and likeable. That should make you:",
+      "options": [
+        "More confident in the bet",
+        "More skeptical and check the fundamentals harder",
+        "Invest immediately",
+        "Skip diligence"
+      ],
+      "correctIndex": 1,
+      "explanation": "Liking tendency distorts facts in favor of those we like; counter it with harder scrutiny, not less."
+    }
+  },
+  {
+    "id": "envy-jealousy",
+    "title": "Envy & Jealousy",
+    "discipline": "Psychology",
+    "quote": "Envy is a really stupid sin because it's the only one you could never possibly have any fun at.",
+    "definition": "Comparing ourselves to others drives irrational, self-harming behavior — overspending, over-risking, and resentment — often more than greed does.",
+    "example": "A person takes reckless risks chasing a neighbor's visible wealth instead of pursuing their own sound plan.",
+    "whenToUse": "When a decision is driven by what someone else has, redirect to your own goals and constraints.",
+    "trap": "Letting comparison, not your own needs, set your behavior.",
+    "drill": {
+      "scenario": "You're tempted into a risky move mainly because a peer got rich on it. Munger would call that:",
+      "options": [
+        "Healthy ambition",
+        "Envy driving an irrational decision",
+        "Smart trend-following",
+        "Due diligence"
+      ],
+      "correctIndex": 1,
+      "explanation": "Envy drives self-harming imitation; anchor on your own goals, not someone else's scoreboard."
+    }
+  },
+  {
+    "id": "contrast-misreaction",
+    "title": "Contrast-Misreaction",
+    "discipline": "Psychology",
+    "quote": "The contrast effect can destroy a fortune in small steps.",
+    "definition": "We judge things by comparison, not absolute value — so a price, offer, or change looks good or bad mainly relative to whatever was placed beside it.",
+    "example": "After being shown a wildly overpriced option first, a buyer overpays for the 'reasonable' one shown next.",
+    "whenToUse": "When something looks like a great deal, ask what it's being contrasted against and what its absolute value is.",
+    "trap": "Letting a manipulated reference point set your sense of value.",
+    "drill": {
+      "scenario": "A salesperson shows an absurd $5,000 option, then a $2,000 one that now feels cheap. That's:",
+      "options": [
+        "Genuine savings",
+        "The contrast effect manipulating your reference point",
+        "A coincidence",
+        "Good negotiation by you"
+      ],
+      "correctIndex": 1,
+      "explanation": "Contrast-misreaction anchors judgment to whatever sits beside it; evaluate absolute value independently."
+    }
+  },
+  {
+    "id": "denial",
+    "title": "Pain-Avoiding Denial",
+    "discipline": "Psychology",
+    "quote": "Reality is too painful to bear, so you distort it until it's bearable.",
+    "definition": "When facts are too painful, the mind simply refuses to accept them — denying a failing venture, a bad hire, or a broken thesis long past the point of evidence.",
+    "example": "A founder ignores months of damning metrics because admitting the product has failed is too painful.",
+    "whenToUse": "When you find yourself explaining away a pile of bad news, name it and look at the raw facts.",
+    "trap": "Editing reality to avoid emotional pain.",
+    "drill": {
+      "scenario": "You keep rationalizing away mounting evidence your project failed because facing it hurts. That's:",
+      "options": [
+        "Optimism",
+        "Pain-avoiding denial",
+        "Resilience",
+        "Patience"
+      ],
+      "correctIndex": 1,
+      "explanation": "Denial distorts painful facts until they're bearable; the fix is to confront the unedited evidence."
+    }
+  },
+  {
+    "id": "association-bias",
+    "title": "Influence From Mere Association",
+    "discipline": "Psychology",
+    "quote": "We like or dislike things merely by what they're associated with.",
+    "definition": "We transfer feelings from one thing onto whatever is linked with it — punishing bearers of bad news, trusting a product because of an attractive ad, or fearing a stock after one bad experience.",
+    "example": "An investor avoids an entire sector forever because one company in it once burned them.",
+    "whenToUse": "When a strong like or dislike traces to an association rather than the thing itself, discount it.",
+    "trap": "Judging something by its company rather than its merits.",
+    "drill": {
+      "scenario": "You distrust a whole industry after one bad experience in it. That blanket reaction is:",
+      "options": [
+        "Sound pattern recognition",
+        "Influence from mere association",
+        "Good risk management",
+        "Base-rate thinking"
+      ],
+      "correctIndex": 1,
+      "explanation": "Association bias spreads a feeling onto everything linked to it; evaluate each case on its own merits."
+    }
+  },
+  {
+    "id": "doubt-avoidance",
+    "title": "Doubt-Avoidance",
+    "discipline": "Psychology",
+    "quote": "The brain is programmed to remove doubt by reaching a decision quickly.",
+    "definition": "Uncertainty is uncomfortable, so we rush to a conclusion to make the discomfort stop — especially under stress or social pressure, often before the analysis is done.",
+    "example": "Under deadline pressure a committee locks in the first plausible option to escape the unease of not knowing.",
+    "whenToUse": "On big, reversible-cost decisions, deliberately tolerate doubt long enough to do the work.",
+    "trap": "Closing a decision to relieve discomfort rather than because it's ready.",
+    "drill": {
+      "scenario": "Under pressure you feel an urge to just 'decide and move on.' On a major decision that urge is:",
+      "options": [
+        "Decisiveness to trust",
+        "Doubt-avoidance — sit with it and finish the analysis",
+        "Always correct",
+        "Irrelevant"
+      ],
+      "correctIndex": 1,
+      "explanation": "Doubt-avoidance rushes closure to end discomfort; on consequential calls, tolerate uncertainty until the work is done."
+    }
+  },
+  {
+    "id": "overoptimism",
+    "title": "Overoptimism",
+    "discipline": "Psychology",
+    "quote": "What a man wishes, that he will also believe.",
+    "definition": "We systematically overestimate favorable outcomes and our own odds, producing rosy forecasts, underbudgeted timelines, and ignored risks.",
+    "example": "A team's project plan assumes everything goes right and ships months late when ordinary problems appear.",
+    "whenToUse": "When forecasting, build in explicit room for ordinary things going wrong.",
+    "trap": "Planning for the best case as if it were the expected case.",
+    "drill": {
+      "scenario": "Your plan only works if everything goes right. Munger's response would be to:",
+      "options": [
+        "Trust the optimism",
+        "Add a margin for predictable problems",
+        "Forecast more aggressively",
+        "Ignore the downside"
+      ],
+      "correctIndex": 1,
+      "explanation": "Overoptimism treats the best case as the base case; counter it with a margin for ordinary failures."
+    }
+  },
+  {
+    "id": "stress-influence",
+    "title": "Stress-Influence",
+    "discipline": "Psychology",
+    "quote": "Sudden stress makes reactions faster, more extreme, and often wrong.",
+    "definition": "Acute stress floods the system and pushes us toward fast, extreme, and frequently irrational behavior — the worst state in which to make a consequential decision.",
+    "example": "In a market crash a panicked investor dumps quality holdings at the bottom, locking in the loss.",
+    "whenToUse": "When stressed, slow down or defer big decisions until the acute reaction subsides.",
+    "trap": "Making irreversible decisions while acutely stressed.",
+    "drill": {
+      "scenario": "Markets are crashing and you feel an urge to sell everything now. The wise move is to:",
+      "options": [
+        "Act fast on the urge",
+        "Slow down — stress is distorting your judgment",
+        "Sell half immediately",
+        "Trust the adrenaline"
+      ],
+      "correctIndex": 1,
+      "explanation": "Stress drives fast, extreme reactions; defer big, irreversible calls until the acute state passes."
+    }
+  },
+  {
+    "id": "mr-market",
+    "title": "Temperament Over IQ",
+    "discipline": "Economics",
+    "quote": "A lot of people with high IQs are terrible investors because they've got terrible temperaments.",
+    "definition": "Long-run results depend more on emotional discipline — patience, equanimity, and resisting the crowd's mood swings — than on raw intelligence.",
+    "example": "A brilliant analyst underperforms a calm, patient investor because he can't sit still or stay rational in panics.",
+    "whenToUse": "When markets or peers swing to extremes, treat their mood as noise to exploit, not instruction to follow.",
+    "trap": "Believing intelligence alone produces good outcomes.",
+    "drill": {
+      "scenario": "The crowd is euphoric and you feel pulled to chase. Munger says your edge comes from:",
+      "options": [
+        "A higher IQ than the crowd",
+        "Temperament — staying rational while others don't",
+        "Faster trading",
+        "More information"
+      ],
+      "correctIndex": 1,
+      "explanation": "Munger holds that temperament beats IQ; treat the crowd's mood as opportunity, not guidance."
+    }
+  },
+  {
+    "id": "moats",
+    "title": "Competitive Moats",
+    "discipline": "Economics",
+    "quote": "A great business at a fair price is superior to a fair business at a great price.",
+    "definition": "Durable businesses are protected by 'moats' — brand, scale, network effects, switching costs — that let them resist competition and earn high returns for years.",
+    "example": "A dominant brand keeps raising prices for a decade because customers won't switch, compounding owner returns.",
+    "whenToUse": "When evaluating a business, ask what protects its profits from competition and how durable that protection is.",
+    "trap": "Paying up for cheap businesses with no lasting advantage.",
+    "drill": {
+      "scenario": "Two companies, same price. The Munger-preferred one is the:",
+      "options": [
+        "Cheaper business with no durable advantage",
+        "Quality business with a wide, durable moat",
+        "One with the most recent growth",
+        "One everyone is buying"
+      ],
+      "correctIndex": 1,
+      "explanation": "Moats protect long-run returns; a great, defended business beats a fair one bought cheap."
+    }
+  },
+  {
+    "id": "critical-mass",
+    "title": "Critical Mass",
+    "discipline": "Physics & Engineering",
+    "quote": "Once you reach critical mass, the reaction sustains itself.",
+    "definition": "Borrowed from physics: below a threshold nothing self-sustains, but past it the system takes off on its own. Many advantages — networks, brands, habits — only matter once they cross that line.",
+    "example": "A marketplace struggles until it crosses a tipping point of buyers and sellers, after which growth becomes self-reinforcing.",
+    "whenToUse": "When assessing growth, ask whether the system has crossed the threshold where it sustains itself.",
+    "trap": "Expecting linear payoff from something that only works past a threshold.",
+    "drill": {
+      "scenario": "A marketplace feels stuck below a certain size, then suddenly accelerates. That threshold is:",
+      "options": [
+        "Random luck",
+        "Critical mass — self-sustaining past a threshold",
+        "Marketing spend",
+        "A data error"
+      ],
+      "correctIndex": 1,
+      "explanation": "Critical mass means effects only self-sustain past a threshold; below it, effort can look wasted."
+    }
+  },
+  {
+    "id": "redundancy",
+    "title": "Redundancy & Backup Systems",
+    "discipline": "Physics & Engineering",
+    "quote": "You should have multiple backup systems, the way a serious airplane does.",
+    "definition": "Robust systems survive failures because critical functions have independent backups. Single points of failure are where disasters originate.",
+    "example": "An airline runs because every critical system has a redundant backup; a startup dies when its one key engineer quits.",
+    "whenToUse": "When a function is critical, ask what happens if its single point of failure breaks — and add a backup.",
+    "trap": "Relying on a single point of failure for something critical.",
+    "drill": {
+      "scenario": "Your operation depends entirely on one irreplaceable person or system. The engineering fix is to:",
+      "options": [
+        "Hope it doesn't fail",
+        "Add independent backups for the critical path",
+        "Document it later",
+        "Accept the risk silently"
+      ],
+      "correctIndex": 1,
+      "explanation": "Redundancy protects critical functions; eliminate single points of failure before they fail."
+    }
+  },
+  {
+    "id": "base-rates",
+    "title": "Base Rates",
+    "discipline": "Math & Probability",
+    "quote": "People calculate too much and think too little.",
+    "definition": "The base rate is how often something happens across the whole reference class. We ignore it in favor of the vivid specifics of our case — and badly misjudge the odds as a result.",
+    "example": "A founder ignores that most startups fail because their story 'feels different,' and is blindsided by ordinary odds.",
+    "whenToUse": "Before trusting a specific forecast, anchor on the base rate for cases like it.",
+    "trap": "Treating your case as exempt from the statistics of its class.",
+    "drill": {
+      "scenario": "You think your venture will beat odds that crush most others, because it 'feels different.' First check:",
+      "options": [
+        "Your gut feeling",
+        "The base rate for ventures like yours",
+        "Your most optimistic projection",
+        "What supporters say"
+      ],
+      "correctIndex": 1,
+      "explanation": "Base-rate neglect over-weighs the vivid specifics of your case; anchor on the reference class first."
+    }
+  },
+  {
+    "id": "expected-value",
+    "title": "Expected Value",
+    "discipline": "Math & Probability",
+    "quote": "The wise ones bet heavily when the world offers them that opportunity.",
+    "definition": "Rational decisions weigh each outcome by its probability, not just its size. The winning policy is to bet big only when the probability-weighted payoff is strongly in your favor — and pass otherwise.",
+    "example": "A disciplined investor stays patient through many marginal bets, then commits heavily on the rare, lopsided opportunity.",
+    "whenToUse": "When sizing a decision, weigh outcomes by probability and act only when the expected value is clearly positive.",
+    "trap": "Reacting to the size of a payoff while ignoring its probability.",
+    "drill": {
+      "scenario": "A rare opportunity appears where the odds are strongly in your favor. Munger's policy is to:",
+      "options": [
+        "Bet the same as always",
+        "Bet heavily when the probability-weighted payoff is lopsided",
+        "Avoid it as too good",
+        "Split evenly across many bets"
+      ],
+      "correctIndex": 1,
+      "explanation": "Expected-value thinking weights payoff by probability; bet big only on rare, strongly favorable odds."
+    }
+  },
+  {
+    "id": "evolution-adaptation",
+    "title": "Adaptation & Selection Pressure",
+    "discipline": "Biology",
+    "quote": "Darwin constantly looked for evidence to disconfirm his own ideas — and survived intellectually because of it.",
+    "definition": "Borrowed from biology: under competitive pressure, what survives is what adapts to changing conditions, not what's currently strongest. Rigidity is fatal over time.",
+    "example": "A market leader that refuses to adapt to a new technology is displaced by a smaller, faster-evolving rival.",
+    "whenToUse": "When assessing durability, ask how well something adapts to change, not just how strong it is today.",
+    "trap": "Assuming present strength guarantees future survival.",
+    "drill": {
+      "scenario": "A dominant incumbent refuses to adapt to a new technology. Over time it most likely:",
+      "options": [
+        "Stays dominant because it's biggest",
+        "Gets displaced by faster-adapting rivals",
+        "Is safe due to its size",
+        "Faces no real risk"
+      ],
+      "correctIndex": 1,
+      "explanation": "Selection pressure rewards adaptability over raw strength; rigidity is fatal as conditions change."
+    }
   }
 ]
